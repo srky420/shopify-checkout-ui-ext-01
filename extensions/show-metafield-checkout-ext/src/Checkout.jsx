@@ -41,7 +41,6 @@ function Extension() {
           }  
         }
       `);
-      console.log(data);
       setMetafield(JSON.parse(data.product?.metafield.value))
     }
     catch (error) {
