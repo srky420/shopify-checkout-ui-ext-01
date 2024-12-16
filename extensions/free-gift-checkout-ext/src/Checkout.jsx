@@ -81,7 +81,7 @@ function Extension() {
   // Get the free gift item from cart
   function getFreeGiftItem(variantId) {
     const cartItem = cartLines.find(item => {
-      if (item.merchandise.id === variantId && item.attributes.find(attr => attr?.key === "freeGift" && attr?.value === "true")) {
+      if (item.merchandise.id === variantId && item.attributes.find(attr => attr?.key === "_freeGift" && attr?.value === "true")) {
         return true;
       }
       return false;
@@ -98,7 +98,7 @@ function Extension() {
         quantity: 1,
         attributes: [
           {
-            key: "freeGift",
+            key: "_freeGift",
             value: "true"
           }
         ]
@@ -112,7 +112,7 @@ function Extension() {
   // Removes a variant from the cart
   async function removeFreeGift(variantId) {
     const cartItem = cartLines.find(item => {
-      if (item.merchandise.id === variantId && item.attributes.find(attr => attr?.key === "freeGift" && attr?.value === "true")) {
+      if (item.merchandise.id === variantId && item.attributes.find(attr => attr?.key === "_freeGift" && attr?.value === "true")) {
         return true;
       }
       return false;

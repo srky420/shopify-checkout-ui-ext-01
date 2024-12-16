@@ -2,7 +2,7 @@ query RunInput {
   cart {
     lines {
       id
-      freeGift: attribute (key: "freeGift") {
+      freeGift: attribute (key: "_freeGift") {
         value
       }
     }
